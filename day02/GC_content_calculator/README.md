@@ -1,6 +1,6 @@
 # 🧬 GC Content Calculator
 ---
-# 📖 Overview
+## 📖 Overview
 
 This Python program calculates the GC content (the percentage of guanine and cytosine bases) in a DNA sequence provided in a FASTA file.
 It uses command-line arguments (sys.argv) to receive the input filename directly from the user, reads the file, extracts the DNA sequence, and prints the GC content as a percentage with two decimal places.
@@ -15,14 +15,14 @@ It can give insights into genome composition, evolutionary differences, and gene
 
 ---
 
-# ⚙️ Program Description
+## ⚙️ Program Description
 / Functionality - Receives a FASTA file as a command-line argument.
 / Reads the DNA sequence from the file.
 / Ignores header lines starting with >.
 / Calculates GC content.
 / Prints the GC content with two decimal precision.
 
-# 🧩 Command to Run the Program
+## 🧩 Command to Run the Program
 To run the program from the command line:
 * python GC_content_calculator.py path/to/your_file.fasta
 
@@ -38,12 +38,12 @@ GC content: 48.33%
 
 ---
 
-# 🧠 Original Prompt to GitHub Copilot
+## 🧠 Original Prompt to GitHub Copilot
 
 This program was generated with the following instruction to Copilot:
-/ I need you to write me a Python program that:
-/ Receives a FASTA file containing a DNA sequence.
-/ Uses command-line input (sys.argv) to get the filename from the user.
-/ Reads the DNA sequence from the file.
-/ Calculates and prints the GC content as a percentage with two decimal points.
-/ Ignores any FASTA header lines that start with '>'.
+> I need you to write me a Python program that:
+> Receives a FASTA file containing a DNA sequence.
+> Uses command-line input (sys.argv) to get the filename from the user.
+> Reads the DNA sequence from the file.
+> Calculates and prints the GC content as a percentage with two decimal points.
+> Ignores any FASTA header lines that start with '>'.
