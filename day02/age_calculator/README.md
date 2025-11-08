@@ -19,3 +19,17 @@ It then calculates the difference between the current date and the user's birth 
 3. It uses Python's `datetime` module to calculate the exact time difference between today and the entered birth date.
 4. Finally, it prints the result in a readable format such as: '26 years, 8 months and 15 days.'
 
+---
+
+## 🤖 How I Used Copilot
+
+This program was written with the assistance of the **GitHub Copilot** tool in **Visual Studio Code (VS Code)**.
+
+### 🧾 Prompt I Gave to Copilot:
+> I need you to write me a program that uses command-line input/output.  
+> The program should calculate the age of the user in years, months, and days.  
+> Ask the user to input their date of birth and then output the age.  
+> For example, my input is `24/02/1999` and the output will be:  
+> `26 years, 8 months, and 15 days.`
+
+Copilot generated the initial version of the code based on this description, and I reviewed and tested the final implementation to ensure it works correctly.
