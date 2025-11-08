@@ -1,6 +1,7 @@
 # Amino Acid Structure Learning Game
 
 A simple educational game to help students learn to identify amino acids from their structural formulas.
+Using GUI!!!
 
 ## Setup
 
@@ -63,3 +64,10 @@ python amino_acid_game.py
 - Recommended size: 400x400 pixels or smaller (will be automatically resized if larger)
 - Clear structural formula showing all atoms and bonds
 - White or transparent background preferred
+
+---
+
+## copilot instructions:
+I need you to write me a Python program that creates a simple GUI game using tkinter. The game should test knowledge of the structure of amino acids. The program should randomly display structure of amino acid and ask the player to guess the name of the amino acid that have been shown. Include a "submit" button to check the answear and show a message like "Correct!" or "Try again" depending on the user's input. Include a Next button to show the next amino acid. The game should continue until the player chooses to quit. 
+You can use RDKit to dw molecular structure but if it is better to download pictures of the amino acids - let me know and I will do it.
+The game should be in the amino_acid_game folder
