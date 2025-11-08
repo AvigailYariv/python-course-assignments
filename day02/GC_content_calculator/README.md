@@ -31,9 +31,13 @@ python GC_content_calculator.py test_sequence.fasta
 
 🧪 Example Output
 Attempting to read file: test_sequence.fasta
+
 File opened successfully
+
 Read 2 lines
+
 Read sequence length: 120
+
 GC content: 48.33%
 
 ---
