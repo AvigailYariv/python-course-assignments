@@ -26,7 +26,7 @@ It then calculates the difference between the current date and the user's birth 
 This program was written with the assistance of the **GitHub Copilot** tool in **Visual Studio Code (VS Code)**.
 
 ### 🧾 Prompt I Gave to Copilot:
-> I need you to write me a program that uses command-line input/output.  
+> I need you to write me a program that uses Interactive Input.  
 > The program should calculate the age of the user in years, months, and days.  
 > Ask the user to input their date of birth and then output the age.  
 > For example, my input is `24/02/1999` and the output will be:  
