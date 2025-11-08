@@ -1,50 +1,33 @@
-# ...existing code...
-import tkinter as tk
-from tkinter import messagebox
-from datetime import datetime, date
-from age_model import calculate_age_from_string, AgeCalculator
+# Program to calculate age in years, months, and days from birth date
+from datetime import datetime
 
-def calculate_age(s: str):
-    """
-    Compatibility wrapper. Returns (years, months) for birthday string "DD/MM/YYYY".
-    """
-    return calculate_age_from_string(s)
+def calculate_age(birth_date, today):
+	years = today.year - birth_date.year
+	months = today.month - birth_date.month
+	days = today.day - birth_date.day
 
-__all__ = ["calculate_age", "AgeCalculator"]
+	if days < 0:
+		months -= 1
+		# Get days in previous month
+		prev_month = today.month - 1 or 12
+		prev_year = today.year if today.month != 1 else today.year - 1
+		days_in_prev_month = (datetime(prev_year, prev_month % 12 + 1, 1) - datetime(prev_year, prev_month, 1)).days
+		days += days_in_prev_month
+	if months < 0:
+		years -= 1
+		months += 12
+	return years, months, days
 
-def on_calculate():
-    s = entry.get()
-    try:
-        years, months = calculate_age(s)
-        result_var.set(f"{years} years and {months} months")
-    except ValueError as e:
-        messagebox.showerror("Invalid input", str(e))
-        result_var.set("")
+def main():
+	birth_str = input("Enter your date of birth (DD/MM/YYYY): ")
+	try:
+		birth_date = datetime.strptime(birth_str, "%d/%m/%Y")
+	except ValueError:
+		print("Invalid date format. Please use DD/MM/YYYY.")
+		return
+	today = datetime.today()
+	years, months, days = calculate_age(birth_date, today)
+	print(f"{years} years, {months} months and {days} days.")
 
-# GUI
-root = tk.Tk()
-root.title("Age Calculator")
-root.configure(bg="light pink")  # light pink background
-
-frame = tk.Frame(root, bg="light pink", padx=12, pady=12)
-frame.pack()
-
-label = tk.Label(frame, text="Enter birthday (DD/MM/YYYY):", bg="light pink")
-label.grid(row=0, column=0, sticky="w")
-
-entry = tk.Entry(frame, width=20)
-entry.grid(row=1, column=0, pady=(6, 6), sticky="w")
-entry.insert(0, "24/02/1999")  # example
-
-btn = tk.Button(frame, text="Calculate Age", command=on_calculate)
-btn.grid(row=1, column=1, padx=(8,0))
-
-result_var = tk.StringVar()
-result_label = tk.Label(frame, textvariable=result_var, bg="light pink", fg="black")
-result_label.grid(row=2, column=0, columnspan=2, pady=(10,0), sticky="w")
-
-# allow Enter key to calculate
-root.bind('<Return>', lambda event: on_calculate())
-
-root.resizable(False, False)
-root.mainloop()
+if __name__ == "__main__":
+	main()
