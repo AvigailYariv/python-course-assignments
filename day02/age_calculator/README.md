@@ -1,7 +1,7 @@
-# 🧮 Age Calculator (Command-Line Version)
+# 🧮 Age Calculator (Interactive Input Version)
 
 This program calculates the user's exact age in **years, months, and days** based on their date of birth.  
-It uses **command-line input and output**.
+It uses **Interactive Input**.
 
 ---
 
