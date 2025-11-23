@@ -1,8 +1,8 @@
-🚀** PDB Model Viewer**
+🚀 ***PDB Model Viewer**
 
 A clean and intuitive Python GUI tool for searching, downloading, and visualizing protein structures from the RCSB PDB database.
 
-🔬 Overview
+🔬 *Overview*
 
 The PDB Model Viewer lets you:
 
@@ -12,21 +12,14 @@ The PDB Model Viewer lets you:
 🖼 Display a 2D image in a Tkinter GUI
 ⌨️ Accept command-line arguments using sys.argv
 
-🧰 Technologies Used
+🧰 *Technologies Used*
 
 🐍 Python 3.8
-
 🪟 Tkinter
-
 🌐 Requests
-
 🖼 Pillow (PIL)
 
-🧩 Optional: BioPython (if added later)
-
-🧵 Command-line arguments (sys.argv)
-
-🔍 How the Protein Search Works
+🔍 *How the Protein Search Works*
 
 When you type a PDB ID (e.g., 1ABC):
 
