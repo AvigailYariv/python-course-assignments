@@ -3,7 +3,7 @@
 A clean and intuitive Python GUI tool for searching, downloading, and visualizing protein structures from the RCSB PDB database.
 
 🔬 *Overview*
-
+---
 The PDB Model Viewer lets you:
 
 ✨ Search proteins by PDB ID
