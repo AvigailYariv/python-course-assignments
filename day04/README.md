@@ -1,4 +1,4 @@
-🚀 PDB Model Viewer
+🚀** PDB Model Viewer**
 
 A clean and intuitive Python GUI tool for searching, downloading, and visualizing protein structures from the RCSB PDB database.
 
