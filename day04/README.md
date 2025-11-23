@@ -22,12 +22,19 @@ The PDB Model Viewer lets you:
 🔍 *How the Protein Search Works*
 ---
 When you type a PDB ID (e.g., 1ABC):
+
 🌐 The app downloads:
+
 https://files.rcsb.org/download/<PDB_ID>.pdb
+
 💾 Saves it locally to:
+
 ./pdb_files/
+
 🧬 Parses the structure
+
 🖼 Renders a simple visualization
+
 📟 Displays it in the GUI
 
 If the ID does not exist → ❌ “No result found”
