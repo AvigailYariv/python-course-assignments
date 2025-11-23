@@ -6,47 +6,59 @@ from PIL import Image, ImageTk
 
 # ---------------- BUSINESS LOGIC ---------------- #
 
-def fetch_pdb_data(query):
-    """
-    Search PDB for a protein name or sequence using RCSB search API.
-    Returns JSON metadata and an image URL (if available).
-    """
-    search_url = "https://search.rcsb.org/rcsbsearch/v2/query?json="
+import requests
 
+def fetch_pdb_data(query):
+    search_url = "https://search.rcsb.org/rcsbsearch/v2/query"
+
+    # Build the query payload
     query_json = {
         "query": {
             "type": "terminal",
-            "service": "text",
+            "service": "full_text",   # more general search
             "parameters": {
-                "attribute": "rcsb_text",
-                "operator": "contains_phrase",
                 "value": query
             }
         },
         "return_type": "entry",
         "request_options": {
-            "results_content_type": ["experimental"]
+            "return_all_hits": True,
+            "results_content_type": ["experimental"]  # or ["experimental", "computational"]
         }
     }
 
-    try:
-        response = requests.get(search_url + requests.utils.quote(str(query_json)))
-        response.raise_for_status()
-        data = response.json()
+    headers = {
+        "Content-Type": "application/json"
+    }
 
-        if not data.get("result_set"):
-            return None, None
+    resp = requests.post(search_url, json=query_json, headers=headers)
+    resp.raise_for_status()
 
-        pdb_id = data["result_set"][0]["identifier"]
-        metadata_url = f"https://data.rcsb.org/rest/v1/core/entry/{pdb_id}"
-        metadata = requests.get(metadata_url).json()
+    data = resp.json()
+    print("DEBUG: Search response:", data)  # debug
 
-        image_url = f"https://cdn.rcsb.org/images/structures/{pdb_id.lower()}_assembly-1.jpeg"
-
-        return metadata, image_url
-
-    except Exception:
+    results = data.get("result_set")
+    if not results:
         return None, None
+
+    # Collect first few PDB IDs (or choose how you want to manage)
+    pdb_ids = [hit["identifier"] for hit in results]
+    print("DEBUG: Found PDB IDs:", pdb_ids)
+
+    # For now, just use the first
+    pdb_id = pdb_ids[0]
+
+    # Fetch metadata
+    metadata_url = f"https://data.rcsb.org/rest/v1/core/entry/{pdb_id}"
+    metadata_resp = requests.get(metadata_url)
+    metadata_resp.raise_for_status()
+    metadata = metadata_resp.json()
+
+    # Image URL (assembly-1 is common but not guaranteed)
+    image_url = f"https://cdn.rcsb.org/images/structures/{pdb_id.lower()}_assembly-1.jpeg"
+
+    return metadata, image_url
+
 
 # ---------------- GUI ---------------- #
 
