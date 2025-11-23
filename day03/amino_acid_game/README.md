@@ -1,4 +1,4 @@
-# Amino Acid Structure Learning Game
+# Amino Acid Structure Learning Game 🎮
 
 A simple educational game to help students learn to identify amino acids from their structural formulas.
 
