@@ -1,9 +1,9 @@
-🚀 PDB Model Viewer
-
+**🚀 PDB Model Viewer**
+---
 A clean and intuitive Python GUI tool for searching, downloading, and visualizing protein structures from the RCSB PDB database.
 
-🔬 Overview
-
+🔬 *Overview*
+---
 The PDB Model Viewer lets you:
 
 ✨ Search proteins by PDB ID
@@ -12,28 +12,23 @@ The PDB Model Viewer lets you:
 🖼 Display a 2D image in a Tkinter GUI
 ⌨️ Accept command-line arguments using sys.argv
 
-🧰 Technologies Used
-
+🧰 *Technologies Used*
+---
 🐍 Python 3.8
-
 🪟 Tkinter
-
 🌐 Requests
-
 🖼 Pillow (PIL)
 
-🧩 Optional: BioPython (if added later)
-
-🧵 Command-line arguments (sys.argv)
-
-🔍 How the Protein Search Works
-
+🔍 *How the Protein Search Works*
+---
 When you type a PDB ID (e.g., 1ABC):
 
 🌐 The app downloads:
+
 https://files.rcsb.org/download/<PDB_ID>.pdb
 
 💾 Saves it locally to:
+
 ./pdb_files/
 
 🧬 Parses the structure
@@ -44,7 +39,8 @@ https://files.rcsb.org/download/<PDB_ID>.pdb
 
 If the ID does not exist → ❌ “No result found”
 
-AI instructions for ChatGTP:
+*AI instructions for ChatGTP:*
+---
 PDB is a website that contains structural data for proteins whose structures have been experimentally determined.
 In the day04 folder, write a Python program that downloads specific data (details provided at the end) from the PDB website and saves it locally, either in a single file or in multiple files.
 
