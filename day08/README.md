@@ -45,12 +45,7 @@ Expected columns:
 Install dependencies:
 ```bash
 python -m pip install pandas numpy matplotlib openpyxl
-
-Run the script
-
-From the day08 directory:
-
-python data_from_excel.py
+```
 
 ---
 
