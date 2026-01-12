@@ -10,8 +10,7 @@ This repository contains Python scripts for analyzing mass spectrometry (MS) pro
 
 ## 📂 1. Ribosomal Protein Coverage (`data_from_excel.py`)
 
-<img width="1900" height="820" alt="image" src="https://github.com/user-attachments/assets/786b2655-c0d5-41b6-b66c-a581e2079acc" />
-
+<img width="1200" height="750" alt="coverage_histogram" src="https://github.com/user-attachments/assets/4d8ab658-63c0-4ebd-87d4-0f55641de3d0" />
 
 ### 🧪 Overview
 The goal of this script is to identify ribosomal proteins based on their annotation and to examine their **coverage [%]**, which reflects how well each protein was detected in the MS experiment.
