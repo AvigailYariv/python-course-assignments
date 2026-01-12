@@ -81,4 +81,6 @@ Prompt for Script 2 (Virtual 2D Gel):
 
 "I have a mass spectrometry dataset... The columns include: "Accession", "Gene Symbol", "MW [kDa]", "calc. pI", and "Abundance: F6: Sample". Please write a Python script using pandas and plotly.express to create an interactive "Virtual 2D Gel" scatter plot... X-axis: "calc. pI", Y-axis: "MW [kDa]" (Log calculation), Color: "Abundance"."
 
+---
+
 <img width="1878" height="846" alt="image" src="https://github.com/user-attachments/assets/47245471-22a9-4e09-8718-c0bc330c09fd" />
