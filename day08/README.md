@@ -10,7 +10,8 @@ This repository contains Python scripts for analyzing mass spectrometry (MS) pro
 
 ## 📂 1. Ribosomal Protein Coverage (`data_from_excel.py`)
 
-<img width="1878" height="846" alt="image" src="https://github.com/user-attachments/assets/47245471-22a9-4e09-8718-c0bc330c09fd" />
+<img width="1900" height="820" alt="image" src="https://github.com/user-attachments/assets/786b2655-c0d5-41b6-b66c-a581e2079acc" />
+
 
 ### 🧪 Overview
 The goal of this script is to identify ribosomal proteins based on their annotation and to examine their **coverage [%]**, which reflects how well each protein was detected in the MS experiment.
@@ -35,6 +36,8 @@ Ribosomal proteins are typically abundant and well-detected in mass spectrometry
 ---
 
 ## 📂 2. Proteome Distribution – Virtual 2D Gel (`graph_from_excel.py`)
+
+<img width="1878" height="846" alt="image" src="https://github.com/user-attachments/assets/47245471-22a9-4e09-8718-c0bc330c09fd" />
 
 ### 🧪 Overview
 This script creates a "Virtual 2D Gel" visualization for **Sample F6**. It plots proteins based on their molecular weight and isoelectric point, mimicking a physical 2-DE gel separation.
